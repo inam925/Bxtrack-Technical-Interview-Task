@@ -86,7 +86,7 @@ class BookController extends Controller
             'title' => 'required|max:255',
             'author' => 'required|max:255',
             'edition' => 'required',
-            'no_of_pages' => 'required',
+            'no_of_pages' => 'required|numeric|min:100|max:1000',
         ]);
     }
 }

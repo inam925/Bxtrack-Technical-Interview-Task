@@ -8,7 +8,8 @@
                 <li class="{{ request()->is('books') ? 'text-blue-500' : '' }}">
                     <a href="/books">All Books</a>
                 </li>
-                <li class="{{ request()->is('books/create') ? 'text-blue-500' : '' }}">
+                <li
+                    class="{{ request()->is('books/create') ? 'text-blue-500' : '' }} transition-colors duration-300 relative inline-flex items-center hover:text-blue-500">
                     <a href="/books/create">Add a new Book</a>
                 </li>
             </ul>

@@ -1,12 +1,13 @@
 <x-layout>
-    <section class="px-6 py-8">
+    <section class="px-6">
         <main class="max-w-6xl mx-auto mt-10 lg:mt-20 space-y-6">
             <article class="max-w-4xl mx-auto lg:grid lg:grid-cols-12 gap-x-10">
-                <div class="col-span-4 lg:text-center lg:pt-14 mb-10">
+                <div class="col-span-3 lg:text-center lg:pt-14 mb-2">
 
                 </div>
 
-                <div class="col-span-8">
+                <div class="col-span-8 w-full p-2
+                        border border-gray-200 rounded">
                     <div class="hidden lg:flex flex-col flex:wrap justify-between mb-6">
                         <a href="/books"
                             class="transition-colors duration-300 relative inline-flex items-center text-lg hover:text-blue-500">
@@ -22,18 +23,27 @@
 
                             Back to Books
                         </a>
-
-                        <h1 class="font-bold text-3xl lg:text-4xl mb-10">
+                        <h1
+                            class="font-bold text-3xl lg:text-4xl mb-4 w-full p-2
+                        border border-gray-200 rounded">
                             {{ $book->title }}
                         </h1>
-                        <p class="mt-4 block text-gray-400 text-xs">
+                        <p
+                            class="mt-2 block text-gray-400 text-xs w-full p-2
+                        border border-gray-200 rounded">
                             Added at <time>{{ $book->created_at->diffForHumans() }}</time>
                         </p>
 
                         <div class="space-y-4 lg:text-lg leading-loose">
-                            <p>Author: {!! $book->author !!}</p>
-                            <p>Edition: {!! $book->edition !!}</p>
-                            <p>No of Pages: {!! $book->no_of_pages !!}</p>
+                            <p class="w-full p-2
+                        border border-gray-200 rounded">Author:
+                                {!! $book->author !!}</p>
+                            <p class="w-full p-2
+                        border border-gray-200 rounded">Edition:
+                                {!! $book->edition !!}</p>
+                            <p class="w-full p-2
+                        border border-gray-200 rounded">No of Pages:
+                                {!! $book->no_of_pages !!}</p>
                         </div>
                     </div>
             </article>
